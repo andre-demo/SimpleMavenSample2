@@ -39,13 +39,13 @@ object Build : BuildType({
 
     steps {
         maven {
-            name = "build step: clean test"
+            name = "test - build step: clean test"
             goals = "clean test"
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
         maven {
-            name = "build step: clean package"
+            name = "test - build step: clean package"
             goals = "clean package"
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
