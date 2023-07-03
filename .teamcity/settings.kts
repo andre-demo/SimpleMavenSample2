@@ -47,8 +47,9 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
         maven {
+            val goalname = "clean package"
             name = "build: clean package"
-            goals = "clean package"
+            goals = goalname
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
