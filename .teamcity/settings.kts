@@ -41,6 +41,7 @@ object Build : BuildType({
 
     steps {
         maven {
+            name = "build: clean test"
             goals = "clean test"
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
