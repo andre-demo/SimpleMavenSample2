@@ -46,6 +46,12 @@ object Build : BuildType({
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
+        maven {
+            name = "build: clean package"
+            goals = "clean package"
+            pomLocation = "ch-simple/pom.xml"
+            runnerArgs = "-Dmaven.test.failure.ignore=true"
+        }
     }
 
     triggers {
