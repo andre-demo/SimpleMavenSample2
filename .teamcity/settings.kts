@@ -28,8 +28,10 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2023.05"
 
 project {
+
     buildType(Build)
 }
+
 object Build : BuildType({
     name = "Build"
 
@@ -39,14 +41,7 @@ object Build : BuildType({
 
     steps {
         maven {
-            name = "build step: clean test"
             goals = "clean test"
-            pomLocation = "ch-simple/pom.xml"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
-        maven {
-            name = "build step: clean package"
-            goals = "clean package"
             pomLocation = "ch-simple/pom.xml"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
